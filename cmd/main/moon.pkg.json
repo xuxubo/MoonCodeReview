@@ -2,8 +2,12 @@
   "is-main": true,
   "import": [
     {
-      "path": "username/MoonCodeReview",
-      "alias": "lib"
+      "path": "moonbitlang/async/http",
+      "alias": "http"
+    },
+    {
+        "path": "moonbitlang/async",
+        "alias": "async"
     }
   ]
 }
