@@ -13,5 +13,9 @@
     "moonbitlang/async/io",
     "moonbitlang/async/os_error"
   ],
-    
+    "link": {
+        "native": {
+            "cc-link-flags": "-lcurl"
+        }
+    }
 }
