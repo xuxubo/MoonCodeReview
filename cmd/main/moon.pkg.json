@@ -7,15 +7,26 @@
     },
     "moonbitlang/async/http",
     "moonbitlang/async/process",
-    "moonbitlang/async/fs",
     "moonbitlang/async/pipe",
     "moonbitlang/async",
     "moonbitlang/async/io",
-    "moonbitlang/async/os_error"
+    "moonbitlang/async/os_error",
+    "moonbitlang/x/fs",
+    "illusory0x0/native",
+    "moonbitlang/x/encoding",
+    "SupremeHuaji/ptime"
   ],
+    "supported-targets": [
+        "js",
+        "native"
+    ],
+    "native-stub": [
+        "git.c"
+    ],
     "link": {
         "native": {
-            "cc-link-flags": "-lcurl"
+            "cc-link-flags": "-lcurl -lgit2"
+            
         }
     }
 }
