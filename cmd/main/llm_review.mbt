@@ -23,15 +23,14 @@ fn condeReview(git_diff : String) -> String {
           "stream": false,
         },
         headers={
-          "Authorization": "Bearer ",
+          "Authorization": "Bearer sk-b2c4155d595a4b05b6065041f670f893",
           "Content-Type": "application/json",
         },
       )) {
-      Ok(response) => {
+      Ok(response) =>
         //println("Status: " + response.statusCode.to_string())
-        println("代码评审结果：: " + response.text())
+        //println("代码评审结果：: " + response.text())
         review = response.text()
-      }
       Err(e) => println("Error: " + e.to_string())
     }
   })

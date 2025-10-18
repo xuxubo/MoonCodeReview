@@ -14,7 +14,7 @@
     "moonbitlang/x/fs",
     "illusory0x0/native",
     "moonbitlang/x/encoding",
-    "SupremeHuaji/ptime"
+    "moonbitlang/x/time"
   ],
     "supported-targets": [
         "js",

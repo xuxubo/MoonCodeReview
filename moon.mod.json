@@ -5,8 +5,7 @@
     "oboard/mio": "0.4.2",
     "moonbitlang/async": "0.9.0",
     "moonbitlang/x": "0.4.34",
-    "illusory0x0/native": "0.2.1",
-    "SupremeHuaji/ptime": "0.1.0"
+    "illusory0x0/native": "0.2.1"
   },
   "readme": "README.mbt.md",
   "repository": "",
