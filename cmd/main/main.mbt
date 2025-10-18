@@ -19,26 +19,27 @@ async fn main {
   .bind(_.as_string()) catch {
     (_ : @json.ParseError) => panic()
   }
-  let url = "https://github.com/xuxubo/code-review.git"
-  let token = "ghp_26Qh7hKuXlbud19OHv1m61qq" // ⚠️ 替换为实际 Token
+  let url = "https://gitxxxxxxxxxxxxeview.git"
+  let token = "ghp_" // ⚠️ 替换为实际 Token
   let repo_dir = "repo"
 
   // 克隆
   println("🚀 Cloning repo...")
   let repo = git_clone(url, repo_dir)
   println("✅ Cloned")
-  let file_name = git_file_name()
+  let file_name = git_file_name() + ".md"
   //日期目录
   //   let date_folder = "repo/2025-10-17"
   //   let _ = mkdir_p(date_folder)
 
   //写文件
-  let file_path = "repo/" + file_name + ".md"
+  let file_path = repo_dir + "/" + file_name
   let _ = write_file(file_path, content.to_string())
-  println("✅ File written")
+  println("✅ File written: " + file_path)
 
   // 添加 + 提交 + 推送
-  let add_ok = git_add(repo, file_path)
+  let add_ok = git_add(repo, file_name)
+  println(add_ok)
   if add_ok == 0 {
     println("✅ Added file")
     let commit_ok = git_commit(repo, "Add new review via MoonBit")

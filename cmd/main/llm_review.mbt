@@ -23,7 +23,7 @@ fn condeReview(git_diff : String) -> String {
           "stream": false,
         },
         headers={
-          "Authorization": "Bearer sk-b2c4155d595a4b05b6065041f670f893",
+          "Authorization": "Bearer ",
           "Content-Type": "application/json",
         },
       )) {
