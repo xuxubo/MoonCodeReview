@@ -15,8 +15,7 @@
 
 - **LLM 智能评审**：支持智谱、OpenAI 等大模型，可根据 git diff 给出详细评审意见
 - **自动化日志管理**：将评审结果按日期写入 GitHub 仓库，并自动 commit & push
-- **微信通知**：通过企业微信模板消息推送评审结果
-- **模块化设计**：分离 Git 操作、LLM 调用、日志写入、微信推送，易于扩展和维护
+- **模块化设计**：分离 Git 操作、LLM 调用、日志写入，易于扩展和维护
 
 ------
 
@@ -29,9 +28,7 @@ moonbit-code-review/
 │   ├── main.mbt               # 程序入口
 │   ├── git_utils.mbt          # Git 操作相关函数
 │   ├── llm_review.mbt         # LLM 调用逻辑
-│   ├── log_writer.mbt         # 写日志并 push 到仓库
-│   ├── wx_push.mbt            # 微信推送逻辑
-│   └── utils.mbt              # 通用函数（HTTP、时间、格式化等）
+│   └── utils.mbt              # 通用函数
 ```
 
 ------
@@ -41,7 +38,6 @@ moonbit-code-review/
 - [MoonBit 语言](https://www.moonbitlang.com/) ≥ 0.15
 - Git
 - GitHub 账户（用于写日志）
-- 企业微信应用（用于推送消息）
 
 ------
 
@@ -76,7 +72,7 @@ cd mooncode-review
 1. 运行项目：
 
 ```bash
-moon run src/main.mbt
+moon run --target native cmd/main
 ```
 
 执行后，程序会自动：
@@ -84,7 +80,6 @@ moon run src/main.mbt
 1. 获取最近一次 git 提交的 diff
 2. 调用 LLM 生成代码评审
 3. 写入 GitHub 日志仓库
-4. 推送微信通知
 
 ------
 
@@ -92,5 +87,6 @@ moon run src/main.mbt
 
 - 可替换 LLM 模型，只需修改 `src/llm_review.mbt` 中的模型配置
 - 可更换日志仓库地址
-- 可自定义微信通知模板
+- 可自定义微信通知模板，发送到微信通知
+
 
